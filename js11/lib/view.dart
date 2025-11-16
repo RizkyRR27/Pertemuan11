@@ -58,6 +58,31 @@ class _MyAppState extends State<MyApp> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              SizedBox(height: 30),
+
+              Container(
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: settings.isDarkMode
+                      ? Colors.blueGrey[800]
+                      : Colors.blue[50],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Mode : ${settings.isDarkMode ? "Gelap 🌙" : "Terang ☀️"}',
+                      style: TextStyle(color: settings.textColor, fontSize: 16),
+                    ),
+                    Switch(
+                      value: settings.isDarkMode,
+                      onChanged: (value) => toggleTheme(),
+                      activeColor: Colors.blue,
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
