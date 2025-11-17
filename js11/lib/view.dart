@@ -98,6 +98,26 @@ class _MyAppState extends State<MyApp> {
                 ),
                 style : TextStyle(color: settings.textColor),
               ),
+               SizedBox(height: 20),
+
+              Container(
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: settings.isDarkMode
+                      ? Colors.blueGrey[800]
+                      : Colors.blue[50],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      'Ukuran Font: ${settings.fontSize}',
+                      style: TextStyle(color: settings.textColor, fontSize: 16),
+                    ),
+                    SizedBox(height: 10),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
