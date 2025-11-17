@@ -100,6 +100,7 @@ class _MyAppState extends State<MyApp> {
               ),
                SizedBox(height: 20),
 
+              //ukuran font
               Container(
                 padding: EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -115,13 +116,31 @@ class _MyAppState extends State<MyApp> {
                       style: TextStyle(color: settings.textColor, fontSize: 16),
                     ),
                     SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: decreaseFont,
+                          icon: Icon(Icons.remove_circle,
+                              color: settings.textColor),
+                        ),
+                        SizedBox(width: 20),
+                        IconButton(
+                          onPressed: increaseFont,
+                          icon:
+                              Icon(Icons.add_circle, color: settings.textColor),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
-            ],
+              SizedBox(height: 20),
+                  ],
+                ),
+              ),
+            
           ),
-        ),
-      ),
     );
   }
 }
